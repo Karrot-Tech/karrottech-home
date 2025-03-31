@@ -7,31 +7,55 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="/logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      .slide-enter {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      .slide-enter-active {
+        transform: translateX(0);
+      }
+      .slide-exit {
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .slide-exit-active {
+        transform: translateX(100%);
+      }
+    </style>
   </head>
   <body class="bg-white text-gray-800 font-sans">
     <!-- Header -->
-    <header class="p-6 shadow-md">
-      <div class="flex items-center justify-between">
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div class="flex items-center justify-between px-6 py-4">
         <div class="flex items-center space-x-3">
           <span class="text-3xl">🥕📡</span>
           <h1 class="text-2xl font-bold">Karrot Tech</h1>
         </div>
+        <nav class="hidden md:flex space-x-6 text-gray-600">
+          <a href="#about" class="hover:text-gray-900">About</a>
+          <a href="#missions" class="hover:text-gray-900">Missions</a>
+          <a href="#portfolio" class="hover:text-gray-900">Portfolio</a>
+          <a href="#contact" class="hover:text-gray-900">Contact</a>
+        </nav>
         <button id="menuToggle" class="md:hidden focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
-      <nav id="menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-gray-600">
-        <a href="#about" class="block px-2 py-1 hover:text-gray-900">About</a>
-        <a href="#missions" class="block px-2 py-1 hover:text-gray-900">Missions</a>
-        <a href="#portfolio" class="block px-2 py-1 hover:text-gray-900">Portfolio</a>
-        <a href="#contact" class="block px-2 py-1 hover:text-gray-900">Contact</a>
+      <nav id="menu" class="fixed top-16 right-0 w-2/3 max-w-sm bg-white shadow-lg transform translate-x-full transition-transform duration-300 md:hidden">
+        <div class="flex flex-col p-6 space-y-4 text-gray-600">
+          <a href="#about" class="hover:text-gray-900">About</a>
+          <a href="#missions" class="hover:text-gray-900">Missions</a>
+          <a href="#portfolio" class="hover:text-gray-900">Portfolio</a>
+          <a href="#contact" class="hover:text-gray-900">Contact</a>
+        </div>
       </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-yellow-50 to-orange-100 py-24 text-center">
+    <section class="bg-gradient-to-br from-yellow-50 to-orange-100 py-32 text-center mt-16">
       <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Engineering the Future with Purpose 🌍✨</h2>
       <p class="text-xl md:text-2xl max-w-3xl mx-auto">
         Bridging <span class="font-semibold text-orange-600">Technology</span> & <span class="font-semibold text-orange-600">Spirituality</span> to create a thriving, compassionate 22nd-century society.
@@ -102,9 +126,17 @@
 
     <!-- Mobile Menu Toggle Script -->
     <script>
-      document.getElementById('menuToggle').addEventListener('click', function () {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('hidden');
+      const menuToggle = document.getElementById('menuToggle');
+      const menu = document.getElementById('menu');
+
+      menuToggle.addEventListener('click', () => {
+        if (menu.classList.contains('translate-x-full')) {
+          menu.classList.remove('translate-x-full');
+          menu.classList.add('translate-x-0');
+        } else {
+          menu.classList.add('translate-x-full');
+          menu.classList.remove('translate-x-0');
+        }
       });
     </script>
   </body>
