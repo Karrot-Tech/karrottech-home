@@ -4,21 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Karrot Tech | Lokah Samastha Sukhino Bhavantu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="/logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body class="bg-white text-gray-800 font-sans">
     <!-- Header -->
-    <header class="flex items-center justify-between p-6 shadow-md">
-      <div class="flex items-center space-x-3">
-        <span class="text-3xl">🥕📡</span>
-        <h1 class="text-2xl font-bold">Karrot Tech</h1>
+    <header class="p-6 shadow-md">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <span class="text-3xl">🥕📡</span>
+          <h1 class="text-2xl font-bold">Karrot Tech</h1>
+        </div>
+        <button id="menuToggle" class="md:hidden focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-      <nav class="space-x-6 text-gray-600">
-        <a href="#about" class="hover:text-gray-900">About</a>
-        <a href="#missions" class="hover:text-gray-900">Missions</a>
-        <a href="#portfolio" class="hover:text-gray-900">Portfolio</a>
-        <a href="#contact" class="hover:text-gray-900">Contact</a>
+      <nav id="menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-gray-600">
+        <a href="#about" class="block px-2 py-1 hover:text-gray-900">About</a>
+        <a href="#missions" class="block px-2 py-1 hover:text-gray-900">Missions</a>
+        <a href="#portfolio" class="block px-2 py-1 hover:text-gray-900">Portfolio</a>
+        <a href="#contact" class="block px-2 py-1 hover:text-gray-900">Contact</a>
       </nav>
     </header>
 
@@ -91,5 +99,13 @@
       </div>
       <p class="text-center mt-6 text-xs text-gray-400">© 2025 Karrot Tech. All rights reserved.</p>
     </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      document.getElementById('menuToggle').addEventListener('click', function () {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+      });
+    </script>
   </body>
 </html>
