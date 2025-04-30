@@ -28,7 +28,20 @@
       import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
     
       createChat({
-        webhookUrl: 'https://primary-production-b2b4b.up.railway.app/webhook/7a631042-8d41-4158-8c0e-5af10e291af7/chat'
+        webhookUrl: 'https://primary-production-b2b4b.up.railway.app/webhook/7a631042-8d41-4158-8c0e-5af10e291af7/chat',
+        initialMessages: [
+          'Hi there! 👋',
+          'My name is Dan. How can I assist you today?'
+        ],
+        i18n: {
+          en: {
+            title: '🥕📡 Karrot Tech',
+            subtitle: "",
+            footer: '',
+            getStarted: 'New Conversation',
+            inputPlaceholder: 'Type your question..',
+          },
+        },
       });
     </script>
   </head>
