@@ -1,225 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karrot Tech | Lokah Samastha Sukhino Bhavantu</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/x-icon" href="/logo.svg">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-      .slide-enter {
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-      }
-      .slide-enter-active {
-        transform: translateX(0);
-      }
-      .slide-exit {
-        transform: translateX(0);
-        transition: transform 0.3s ease-in-out;
-      }
-      .slide-exit-active {
-        transform: translateX(100%);
-      }
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-    <style>
-      :root {
-        --chat--color-primary: #e87435;
-        --chat--color-primary-shade-50: #e96b27;
-        --chat--color-primary-shade-100: #ea580c;
-        --chat--color-secondary: #20b69e;
-        --chat--color-secondary-shade-50: #1ca08a;
-        --chat--color-white: #ffffff;
-        --chat--color-light: #f2f4f8;
-        --chat--color-light-shade-50: #e6e9f1;
-        --chat--color-light-shade-100: #c2c5cc;
-        --chat--color-medium: #d2d4d9;
-        --chat--color-dark: #101330;
-        --chat--color-disabled: #777980;
-        --chat--color-typing: #404040;
 
-        --chat--spacing: 1rem;
-        --chat--border-radius: 0.25rem;
-        --chat--transition-duration: 0.15s;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karrot Tech | Lokah Samastha Sukhino Bhavantu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="/logo.svg">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .slide-enter {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
 
-        --chat--window--width: 400px;
-        --chat--window--height: 600px;
+    .slide-enter-active {
+      transform: translateX(0);
+    }
 
-        --chat--header-height: auto;
-        --chat--header--padding: var(--chat--spacing);
-        --chat--header--background: var(--chat--color-dark);
-        --chat--header--color: var(--chat--color-light);
-        --chat--header--border-top: none;
-        --chat--header--border-bottom: none;
-        --chat--header--border-bottom: none;
-        --chat--header--border-bottom: none;
-        --chat--heading--font-size: 2em;
-        --chat--header--color: var(--chat--color-light);
-        --chat--subtitle--font-size: inherit;
-        --chat--subtitle--line-height: 1.8;
+    .slide-exit {
+      transform: translateX(0);
+      transition: transform 0.3s ease-in-out;
+    }
 
-        --chat--textarea--height: 50px;
+    .slide-exit-active {
+      transform: translateX(100%);
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <style>
+    :root {
+      --chat--color-primary: #e87435;
+      --chat--color-primary-shade-50: #e96b27;
+      --chat--color-primary-shade-100: #ea580c;
+      --chat--color-secondary: #20b69e;
+      --chat--color-secondary-shade-50: #1ca08a;
+      --chat--color-white: #ffffff;
+      --chat--color-light: #f2f4f8;
+      --chat--color-light-shade-50: #e6e9f1;
+      --chat--color-light-shade-100: #c2c5cc;
+      --chat--color-medium: #d2d4d9;
+      --chat--color-dark: #101330;
+      --chat--color-disabled: #777980;
+      --chat--color-typing: #404040;
 
-        --chat--message--font-size: 1rem;
-        --chat--message--padding: var(--chat--spacing);
-        --chat--message--border-radius: var(--chat--border-radius);
-        --chat--message-line-height: 1.8;
-        --chat--message--bot--background: var(--chat--color-white);
-        --chat--message--bot--color: var(--chat--color-dark);
-        --chat--message--bot--border: none;
-        --chat--message--user--background: var(--chat--color-secondary);
-        --chat--message--user--color: var(--chat--color-white);
-        --chat--message--user--border: none;
-        --chat--message--pre--background: rgba(0, 0, 0, 0.05);
+      --chat--spacing: 1rem;
+      --chat--border-radius: 0.25rem;
+      --chat--transition-duration: 0.15s;
 
-        --chat--toggle--background: var(--chat--color-primary);
-        --chat--toggle--hover--background: var(--chat--color-primary-shade-50);
-        --chat--toggle--active--background: var(--chat--color-primary-shade-100);
-        --chat--toggle--color: var(--chat--color-white);
-        --chat--toggle--size: 64px;
-      }
-    </style>
-    <script type="module">
-      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-    
-      createChat({
-        webhookUrl: 'https://n8n.karrot.tech/webhook/7a631042-8d41-4158-8c0e-5af10e291af7/chat',
-        initialMessages: [
-          'Hi there! 👋 My name is Suraj. How can I assist you today?'
-        ],
-        i18n: {
-          en: {
-            title: 'Live Chat',
-            subtitle: "",
-            footer: '',
-            getStarted: 'New Conversation',
-            inputPlaceholder: 'Type your question..',
-          },
+      --chat--window--width: 400px;
+      --chat--window--height: 600px;
+
+      --chat--header-height: auto;
+      --chat--header--padding: var(--chat--spacing);
+      --chat--header--background: var(--chat--color-dark);
+      --chat--header--color: var(--chat--color-light);
+      --chat--header--border-top: none;
+      --chat--header--border-bottom: none;
+      --chat--header--border-bottom: none;
+      --chat--header--border-bottom: none;
+      --chat--heading--font-size: 2em;
+      --chat--header--color: var(--chat--color-light);
+      --chat--subtitle--font-size: inherit;
+      --chat--subtitle--line-height: 1.8;
+
+      --chat--textarea--height: 50px;
+
+      --chat--message--font-size: 1rem;
+      --chat--message--padding: var(--chat--spacing);
+      --chat--message--border-radius: var(--chat--border-radius);
+      --chat--message-line-height: 1.8;
+      --chat--message--bot--background: var(--chat--color-white);
+      --chat--message--bot--color: var(--chat--color-dark);
+      --chat--message--bot--border: none;
+      --chat--message--user--background: var(--chat--color-secondary);
+      --chat--message--user--color: var(--chat--color-white);
+      --chat--message--user--border: none;
+      --chat--message--pre--background: rgba(0, 0, 0, 0.05);
+
+      --chat--toggle--background: var(--chat--color-primary);
+      --chat--toggle--hover--background: var(--chat--color-primary-shade-50);
+      --chat--toggle--active--background: var(--chat--color-primary-shade-100);
+      --chat--toggle--color: var(--chat--color-white);
+      --chat--toggle--size: 64px;
+    }
+  </style>
+  <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+      webhookUrl: 'https://primary-production-b2b4b.up.railway.app/webhook/7a631042-8d41-4158-8c0e-5af10e291af7/chat',
+      initialMessages: [
+        'Hi there! 👋 My name is Suraj. How can I assist you today?'
+      ],
+      i18n: {
+        en: {
+          title: 'Live Chat',
+          subtitle: "",
+          footer: '',
+          getStarted: 'New Conversation',
+          inputPlaceholder: 'Type your question..',
         },
-      });
-    </script>
-  </head>
-  <body class="bg-white text-gray-800 font-sans">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div class="flex items-center justify-between px-6 py-4">
-        <a href="#" class="flex items-center space-x-3">
-          <span class="text-3xl">🥕📡</span>
-          <h1 class="text-2xl font-bold">Karrot Tech</h1>
-        </a>
-        <nav class="hidden md:flex space-x-6 text-gray-600">
-          <a href="#about" class="hover:text-gray-900">About</a>
-          <a href="#missions" class="hover:text-gray-900">Missions</a>
-          <a href="#portfolio" class="hover:text-gray-900">Portfolio</a>
-          <a href="#contact" class="hover:text-gray-900">Contact</a>
-        </nav>
-        <button id="menuToggle" class="md:hidden focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-      <nav id="menu" class="fixed top-16 right-0 w-2/3 max-w-sm bg-white shadow-lg transform translate-x-full transition-transform duration-300 md:hidden">
-        <div class="flex flex-col p-6 space-y-4 text-gray-600">
-          <a href="#about" class="menu-link hover:text-gray-900">About</a>
-          <a href="#missions" class="menu-link hover:text-gray-900">Missions</a>
-          <a href="#portfolio" class="menu-link hover:text-gray-900">Portfolio</a>
-          <a href="#contact" class="menu-link hover:text-gray-900">Contact</a>
-        </div>
+      },
+    });
+  </script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="flex items-center justify-between px-6 py-4">
+      <a href="#" class="flex items-center space-x-3">
+        <span class="text-3xl">🥕📡</span>
+        <h1 class="text-2xl font-bold">Karrot Tech</h1>
+      </a>
+      <nav class="hidden md:flex space-x-6 text-gray-600">
+        <a href="#about" class="hover:text-gray-900">About</a>
+        <a href="#missions" class="hover:text-gray-900">Missions</a>
+        <a href="#portfolio" class="hover:text-gray-900">Portfolio</a>
+        <a href="#contact" class="hover:text-gray-900">Contact</a>
       </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-yellow-50 to-orange-100 py-32 text-center mt-16">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Engineering the Future with Purpose 🌍✨</h2>
-      <p class="text-xl md:text-2xl max-w-3xl mx-auto">
-        Bridging <span class="font-semibold text-orange-600">Technology</span> & <span class="font-semibold text-orange-600">Spirituality</span> to create a thriving, compassionate 22nd-century society.
-      </p>
-    </section>
-
-    <!-- Missions Section -->
-    <section id="missions" class="py-20 px-6 md:px-20 bg-white">
-      <h3 class="text-3xl font-bold text-center mb-12">Our Core Missions 🚀</h3>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="p-6 border rounded-xl shadow-sm">
-          <h4 class="text-xl font-semibold mb-2">🧘 Mental & Spiritual Health</h4>
-          <p>
-            Building bleeding-edge <strong>Spiritual Companion Bots</strong> to support mental health, mindfulness, and the overall well-being of every soul.
-          </p>
-        </div>
-        <div class="p-6 border rounded-xl shadow-sm">
-          <h4 class="text-xl font-semibold mb-2">📚 Vedic + STEM Education</h4>
-          <p>
-            An <strong>educational revolution for kids</strong>—merging Vedic wisdom, spiritual cyphers, and modern STEM to equip our children for tomorrow.
-          </p>
-        </div>
-        <div class="p-6 border rounded-xl shadow-sm">
-          <h4 class="text-xl font-semibold mb-2">🛒 Future of Commerce</h4>
-          <p>
-            Creating human-centric technologies that <strong>revolutionize commerce</strong> and promote a sustainable, joyous lifestyle for all of humankind.
-          </p>
-        </div>
+      <button id="menuToggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <nav id="menu"
+      class="fixed top-16 right-0 w-2/3 max-w-sm bg-white shadow-lg transform translate-x-full transition-transform duration-300 md:hidden">
+      <div class="flex flex-col p-6 space-y-4 text-gray-600">
+        <a href="#about" class="menu-link hover:text-gray-900">About</a>
+        <a href="#missions" class="menu-link hover:text-gray-900">Missions</a>
+        <a href="#portfolio" class="menu-link hover:text-gray-900">Portfolio</a>
+        <a href="#contact" class="menu-link hover:text-gray-900">Contact</a>
       </div>
-    </section>
+    </nav>
+  </header>
 
-    <!-- Core Value Statement -->
-    <section class="py-16 bg-orange-50 text-center">
-      <h4 class="text-2xl font-semibold mb-4">Our Eternal Guiding Principle</h4>
-      <p class="text-3xl font-bold text-orange-700">"Lokah Samastha Sukhino Bhavantu"</p>
-      <p class="text-lg mt-4">May all beings everywhere be happy and free. 🙏</p>
-    </section>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-yellow-50 to-orange-100 py-32 text-center mt-16">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Engineering the Future with Purpose 🌍✨</h2>
+    <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+      Bridging <span class="font-semibold text-orange-600">Technology</span> & <span
+        class="font-semibold text-orange-600">Spirituality</span> to create a thriving, compassionate 22nd-century
+      society.
+    </p>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-6 md:px-20 bg-white">
-      <h3 class="text-3xl font-bold mb-6">About Karrot Tech</h3>
-      <p class="max-w-4xl text-lg">
-        Karrot Tech (🥕📡) is a spiritual-tech hybrid startup founded with the vision of building compassionate, powerful, and transformative tools for humanity. We believe technology must be guided by consciousness, empathy, and wisdom. Our focus is on mental wellness, children’s education, and ethical commerce—all driven by the light of Vedic truth and futuristic design.
-      </p>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 px-6 md:px-20 bg-gray-50">
-      <h3 class="text-3xl font-bold text-center mb-8">Our Products & Portfolio 🛠️</h3>
-      <p class="text-center text-gray-600">Coming soon: Stay tuned as we launch live products.</p>
-    </section>
-
-    <!-- Contact / Footer -->
-    <footer id="contact" class="py-10 px-6 md:px-20 bg-gray-800 text-gray-100">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div>
-          <h4 class="font-bold text-lg">Karrot Tech (🥕📡)</h4>
-          <p class="text-sm">Headquartered in Kashi | Serving the world 🌐</p>
-        </div>
-        <div class="mt-4 md:mt-0 space-x-4">
-          <a href="#" class="text-orange-400 hover:text-white">Twitter</a>
-          <a href="#" class="text-orange-400 hover:text-white">LinkedIn</a>
-          <a href="#" class="text-orange-400 hover:text-white">Email</a>
-        </div>
+  <!-- Missions Section -->
+  <section id="missions" class="py-20 px-6 md:px-20 bg-white">
+    <h3 class="text-3xl font-bold text-center mb-12">Our Core Missions 🚀</h3>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="p-6 border rounded-xl shadow-sm">
+        <h4 class="text-xl font-semibold mb-2">🧘 Mental & Spiritual Health</h4>
+        <p>
+          Building bleeding-edge <strong>Spiritual Companion Bots</strong> to support mental health, mindfulness, and
+          the overall well-being of every soul.
+        </p>
       </div>
-      <p class="text-center mt-6 text-xs text-gray-400">© 2025 Karrot Tech. All rights reserved.</p>
-    </footer>
+      <div class="p-6 border rounded-xl shadow-sm">
+        <h4 class="text-xl font-semibold mb-2">📚 Vedic + STEM Education</h4>
+        <p>
+          An <strong>educational revolution for kids</strong>—merging Vedic wisdom, spiritual cyphers, and modern STEM
+          to equip our children for tomorrow.
+        </p>
+      </div>
+      <div class="p-6 border rounded-xl shadow-sm">
+        <h4 class="text-xl font-semibold mb-2">🛒 Future of Commerce</h4>
+        <p>
+          Creating human-centric technologies that <strong>revolutionize commerce</strong> and promote a sustainable,
+          joyous lifestyle for all of humankind.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Mobile Menu Toggle Script -->
-    <script>
-      const menuToggle = document.getElementById('menuToggle');
-      const menu = document.getElementById('menu');
-      const menuLinks = document.querySelectorAll('.menu-link');
+  <!-- Core Value Statement -->
+  <section class="py-16 bg-orange-50 text-center">
+    <h4 class="text-2xl font-semibold mb-4">Our Eternal Guiding Principle</h4>
+    <p class="text-3xl font-bold text-orange-700">"Lokah Samastha Sukhino Bhavantu"</p>
+    <p class="text-lg mt-4">May all beings everywhere be happy and free. 🙏</p>
+  </section>
 
-      menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('translate-x-full');
-        menu.classList.toggle('translate-x-0');
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 md:px-20 bg-white">
+    <h3 class="text-3xl font-bold mb-6">About Karrot Tech</h3>
+    <p class="max-w-4xl text-lg">
+      Karrot Tech (🥕📡) is a spiritual-tech hybrid startup founded with the vision of building compassionate, powerful,
+      and transformative tools for humanity. We believe technology must be guided by consciousness, empathy, and wisdom.
+      Our focus is on mental wellness, children’s education, and ethical commerce—all driven by the light of Vedic truth
+      and futuristic design.
+    </p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 px-6 md:px-20 bg-gray-50">
+    <h3 class="text-3xl font-bold text-center mb-8">Our Products & Portfolio 🛠️</h3>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="p-6 border rounded-xl shadow-sm bg-white">
+        <h4 class="text-xl font-semibold mb-2">📖 Sai Leela Rahasya</h4>
+        <p class="mb-4">
+          A digital compilation of divine discourses and mysteries of Sri Sai Baba, narrated by KrishnaJi.
+        </p>
+        <a href="Sai_Leela_Rahasya.html" class="text-orange-600 font-bold hover:underline">Read Book &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer id="contact" class="py-10 px-6 md:px-20 bg-gray-800 text-gray-100">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div>
+        <h4 class="font-bold text-lg">Karrot Tech (🥕📡)</h4>
+        <p class="text-sm">Headquartered in Kashi | Serving the world 🌐</p>
+      </div>
+      <div class="mt-4 md:mt-0 space-x-4">
+        <a href="#" class="text-orange-400 hover:text-white">Twitter</a>
+        <a href="#" class="text-orange-400 hover:text-white">LinkedIn</a>
+        <a href="#" class="text-orange-400 hover:text-white">Email</a>
+      </div>
+    </div>
+    <p class="text-center mt-6 text-xs text-gray-400">© 2025 Karrot Tech. All rights reserved.</p>
+  </footer>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('translate-x-full');
+      menu.classList.toggle('translate-x-0');
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (!menu.classList.contains('translate-x-full')) {
+          menu.classList.add('translate-x-full');
+          menu.classList.remove('translate-x-0');
+        }
       });
+    });
+  </script>
+</body>
 
-      menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          if (!menu.classList.contains('translate-x-full')) {
-            menu.classList.add('translate-x-full');
-            menu.classList.remove('translate-x-0');
-          }
-        });
-      });
-    </script>
-  </body>
 </html>
