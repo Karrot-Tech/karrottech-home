@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Comparison: The Leela of Damu Anna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .table-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .table-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .table-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .row-hover:hover {
+            background-color: #f1f5f9;
+        }
+
+        .loader {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #f59e0b;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .video-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-white border-b border-slate-200 py-12 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="serif-title text-4xl md:text-5xl font-bold text-slate-900 mb-4">The Leela of Damu Anna</h1>
+            <p class="text-slate-500 max-w-2xl mx-auto text-lg">
+                Comparative analysis of four articles derived from the <span
+                    class="text-slate-900 font-medium italic">Sai Leela Rahasya</span> discourse.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Primary Source Material Card -->
+        <section class="mb-12">
+            <div class="video-gradient rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden">
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1">
+
+                        <h2 class="serif-title text-2xl md:text-3xl font-bold mb-4">दामू ... ये आम खा और खाके मर</h2>
+                        <p class="text-slate-300 text-sm mb-6 max-w-xl">
+                            The original discourse from the <span class="text-amber-400 font-medium">Sai Leela
+                                Rahasya</span> channel. This video serves as the root source for all four comparative
+                            articles, detailing the spiritual reasoning behind Baba's "Die" command.
+                        </p>
+                        <a href="https://www.youtube.com/watch?v=Yx8y3aQ5Yy8" target="_blank"
+                            class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2 rounded-lg text-sm transition-all group">
+                            <svg class="w-5 h-5 text-rose-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z" />
+                            </svg>
+                            Watch Original Discourse
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 w-full md:w-auto">
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl text-center">
+                            <p class="text-amber-400 font-bold text-xl leading-none">8</p>
+                            <p class="text-[10px] uppercase text-slate-400 mt-1">Total Children</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl text-center">
+                            <p class="text-amber-400 font-bold text-xl leading-none">Kriyamana</p>
+                            <p class="text-[10px] uppercase text-slate-400 mt-1">Karma Type</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl text-center">
+                            <p class="text-amber-400 font-bold text-xl leading-none">4</p>
+                            <p class="text-[10px] uppercase text-slate-400 mt-1">Divine Mangoes</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl text-center">
+                            <p class="text-amber-400 font-bold text-xl leading-none">Die</p>
+                            <p class="text-[10px] uppercase text-slate-400 mt-1">Spiritual Riddle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Findings Cards -->
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-slate-900 mb-2">Video Origin</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        The "Diamonds/Pearls" analogy is a central theme in the video, illustrating the tragedy of
+                        seeking worldly gain after spiritual service.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-slate-900 mb-2">Kriyamana Karma</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        The video emphasizes that while Prarabdha (destiny) had no children, Damu Anna's persistence
+                        created a new Kriyamana (current action) path.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-slate-900 mb-2">The "Die" Warning</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        The video defines "Die" as the loss of freedom—spiritual death through worldly entanglement and
+                        parental anxiety.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Source Gists Section -->
+        <section class="mt-16 mb-16">
+            <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+                Derived Interpretations (Gists)
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="https://gist.github.com/shirdi-sai-research/article-1" target="_blank"
+                    class="glass-card p-5 rounded-xl hover:border-amber-400 hover:shadow-lg transition-all group">
+                    <p class="text-xs font-bold text-slate-400 uppercase mb-2">Gist 01</p>
+                    <h3 class="font-bold text-slate-900 group-hover:text-amber-700 transition-colors">Mystery of "Die"
+                    </h3>
+                </a>
+                <a href="https://gist.github.com/shirdi-sai-research/article-2" target="_blank"
+                    class="glass-card p-5 rounded-xl hover:border-amber-400 hover:shadow-lg transition-all group">
+                    <p class="text-xs font-bold text-slate-400 uppercase mb-2">Gist 02</p>
+                    <h3 class="font-bold text-slate-900 group-hover:text-amber-700 transition-colors">Quest for a Child
+                    </h3>
+                </a>
+                <a href="https://gist.github.com/shirdi-sai-research/article-3" target="_blank"
+                    class="glass-card p-5 rounded-xl hover:border-amber-400 hover:shadow-lg transition-all group">
+                    <p class="text-xs font-bold text-slate-400 uppercase mb-2">Gist 03</p>
+                    <h3 class="font-bold text-slate-900 group-hover:text-amber-700 transition-colors">Destiny & Stars
+                    </h3>
+                </a>
+                <a href="https://gist.github.com/shirdi-sai-research/article-4" target="_blank"
+                    class="glass-card p-5 rounded-xl hover:border-amber-400 hover:shadow-lg transition-all group">
+                    <p class="text-xs font-bold text-slate-400 uppercase mb-2">Gist 04</p>
+                    <h3 class="font-bold text-slate-900 group-hover:text-amber-700 transition-colors">Wish Fulfillment
+                    </h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Comparison Table Section -->
+        <div class="mb-16">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+                        </path>
+                    </svg>
+                    Feature Comparison Matrix
+                </h2>
+                <span class="text-sm text-slate-500 italic hidden sm:block">Scroll horizontally to view all
+                    articles</span>
+            </div>
+
+            <div class="glass-card rounded-2xl shadow-xl overflow-hidden">
+                <div class="overflow-x-auto table-scroll">
+                    <table id="comparison-table" class="w-full text-left border-collapse min-w-[1000px]">
+                        <thead>
+                            <tr class="bg-slate-50 border-b border-slate-200">
+                                <th
+                                    class="p-5 text-sm font-semibold text-slate-600 uppercase tracking-wider w-48 sticky left-0 bg-slate-50 z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
+                                    Feature</th>
+                                <th class="p-5 text-sm font-bold text-slate-900 border-l border-slate-200">Gist 1
+                                </th>
+                                <th class="p-5 text-sm font-bold text-slate-900 border-l border-slate-200">Gist 2
+                                </th>
+                                <th class="p-5 text-sm font-bold text-slate-900 border-l border-slate-200">Gist 3
+                                </th>
+                                <th class="p-5 text-sm font-bold text-slate-900 border-l border-slate-200">Gist 4
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <!-- Title Focus -->
+                            <tr class="row-hover transition-colors">
+                                <td
+                                    class="p-5 font-medium text-slate-700 bg-white sticky left-0 z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
+                                    Title Focus</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">The mystery of the "Die"
+                                    command.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Damu Anna’s quest/desire for a
+                                    child.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Damu Anna’s destiny and the
+                                    stars.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100 font-medium text-slate-900">Path
+                                    to wish fulfillment.</td>
+                            </tr>
+                            <!-- Baba's Quote -->
+                            <tr class="row-hover transition-colors">
+                                <td
+                                    class="p-5 font-medium text-slate-700 bg-white sticky left-0 z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
+                                    Baba's Quote</td>
+                                <td class="p-5 text-slate-600 italic border-l border-slate-100">"Damorna"</td>
+                                <td class="p-5 text-slate-600 italic border-l border-slate-100">"Damu Anna"</td>
+                                <td class="p-5 text-slate-600 italic border-l border-slate-100">"Damorna"</td>
+                                <td class="p-5 text-slate-600 italic border-l border-slate-100">"Damu Anna"</td>
+                            </tr>
+                            <!-- Outcome -->
+                            <tr class="row-hover transition-colors">
+                                <td
+                                    class="p-5 font-medium text-slate-700 bg-white sticky left-0 z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
+                                    Outcome Details</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">8 children (4 sons, 4
+                                    daughters)</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">8 children (4 sons, 4
+                                    daughters)</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">8 children (4 sons, 4
+                                    daughters)</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">8 children (4 sons, 4
+                                    daughters)</td>
+                            </tr>
+                            <!-- Analogy -->
+                            <tr class="row-hover transition-colors">
+                                <td
+                                    class="p-5 font-medium text-slate-700 bg-white sticky left-0 z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
+                                    Analogy Used</td>
+                                <td colspan="4"
+                                    class="p-5 text-center text-amber-700 bg-amber-50/30 font-medium italic">
+                                    "Diamonds/Pearls" vs. "Stones/Pebbles" (Consistent across all articles)</td>
+                            </tr>
+                            <!-- Metaphor -->
+                            <tr class="row-hover transition-colors">
+                                <td
+                                    class="p-5 font-medium text-slate-700 bg-white sticky left-0 z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
+                                    Parental Metaphor</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Child demanding chocolates with
+                                    rotten teeth.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Mother tired of child bickering
+                                    for candy.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Mother tired of child bickering
+                                    for chocolate.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Child insisting on sweets with
+                                    rotten teeth.</td>
+                            </tr>
+                            <!-- Definition -->
+                            <tr class="row-hover transition-colors">
+                                <td
+                                    class="p-5 font-medium text-slate-700 bg-white sticky left-0 z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
+                                    The "Die" Definition</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Death of peace; breaking of the
+                                    back under responsibility.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Carrying the heavy
+                                    responsibility of 8 lives.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Suffering and worldly bondage;
+                                    anxiety over illness/grief.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100 font-medium text-indigo-700">The
+                                    "depth of the sea"; loss of freedom from bondage.</td>
+                            </tr>
+                            <!-- Unique Highlight -->
+                            <tr class="row-hover transition-colors">
+                                <td
+                                    class="p-5 font-medium text-slate-700 bg-white sticky left-0 z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]">
+                                    Unique Highlight</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Emphasizes "breaking of the
+                                    back".</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Focuses on "Selfless service"
+                                    rendered.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Mentions Ram Navami festival
+                                    assistance.</td>
+                                <td class="p-5 text-slate-600 border-l border-slate-100">Describes his desire as
+                                    "thirst-like".</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gemini Deep Insight Section -->
+        <!-- <section class="mb-16">
+            <div class="glass-card rounded-2xl p-8 border-l-4 border-amber-500 shadow-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                    Deep Insight ✨
+                </h3>
+                <p class="text-slate-600 text-sm mb-6">Ask Gemini a question grounded in the <strong>Sai Leela
+                        Rahasya</strong> transcript and these comparative findings.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="text" id="ai-query"
+                        placeholder="e.g. How does the video explain the 'rotten teeth' metaphor?"
+                        class="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-slate-700 shadow-inner">
+                    <button onclick="askGemini()" id="query-btn"
+                        class="bg-slate-900 text-white font-semibold py-3 px-8 rounded-xl hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
+                        Get Insight ✨
+                    </button>
+                </div>
+                <div id="ai-response-container" class="hidden mt-8 pt-8 border-t border-slate-100">
+                    <div class="prose prose-slate max-w-none text-slate-700 text-sm leading-relaxed"
+                        id="ai-response-text"></div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <!-- Call to Action (Behind Feature Flag) -->
+        <!-- <div id="synthesis-section"
+            class="hidden mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden transition-all duration-700">
+            <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+            <div id="cta-content">
+                <h2 class="serif-title text-2xl md:text-3xl font-bold mb-4">Synthesize Gists & Articles?</h2>
+                <p class="text-slate-300 max-w-xl mx-auto mb-8">
+                    Create a definitive version that bridges the video's spiritual discourse with the literary nuances
+                    of the four articles.
+                </p>
+                <button onclick="generateMerge()" id="merge-btn"
+                    class="bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 mx-auto">
+                    Generate Ultimate Synthesis ✨
+                </button>
+            </div>
+            <div id="merge-result"
+                class="hidden text-left bg-white/5 p-6 rounded-2xl border border-white/10 mt-6 max-h-[500px] overflow-y-auto">
+                <h3 class="serif-title text-xl font-bold mb-4 text-amber-400">The Ultimate Synthesis</h3>
+                <div id="merge-text" class="text-slate-300 text-sm leading-relaxed whitespace-pre-wrap"></div>
+                <button onclick="resetMerge()"
+                    class="mt-6 text-xs text-slate-500 hover:text-white underline underline-offset-4 uppercase tracking-widest">Close
+                    Synthesis</button>
+            </div>
+        </div> -->
+
+    </main>
+
+    <footer class="py-12 text-center text-slate-400 text-sm border-t border-slate-200">
+        <p>&copy; 2024 Sai Leela Research & Comparison • Grounded in Sai Leela Rahasya Transcript</p>
+    </footer>
+
+    <script>
+        const apiKey = "";
+        const FLAGS = { enableSynthesis: true };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (FLAGS.enableSynthesis) document.getElementById('synthesis-section').classList.remove('hidden');
+        });
+
+        async function callGemini(prompt, retries = 5, delay = 1000) {
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: prompt }] }],
+                        systemInstruction: {
+                            parts: [{ text: "You are a specialized scholar of Indian spiritual literature and the Sai Leela. Your knowledge is grounded specifically in the Sai Leela Rahasya discourse regarding Damu Anna. You prioritize the 'diamonds vs pebbles' analogy and the 'rotten teeth' metaphor as explained by the original orator." }]
+                        }
+                    })
+                });
+                if (!response.ok) {
+                    if (retries > 0) { await new Promise(r => setTimeout(r, delay)); return callGemini(prompt, retries - 1, delay * 2); }
+                    throw new Error('API request failed');
+                }
+                const data = await response.json();
+                return data.candidates?.[0]?.content?.parts?.[0]?.text;
+            } catch (error) {
+                if (retries > 0) { await new Promise(r => setTimeout(r, delay)); return callGemini(prompt, retries - 1, delay * 2); }
+                showError("The spiritual insight engine is currently resting.");
+                throw error;
+            }
+        }
+
+        function showError(msg) {
+            const toast = document.getElementById('error-toast');
+            const message = document.getElementById('error-message');
+            if (message) message.innerText = msg;
+            if (toast) toast.classList.remove('hidden');
+        }
+
+        async function askGemini() {
+            const query = document.getElementById('ai-query').value.trim();
+            const btn = document.getElementById('query-btn');
+            const container = document.getElementById('ai-response-container');
+            const responseText = document.getElementById('ai-response-text');
+            if (!query) return;
+            btn.disabled = true;
+            btn.innerHTML = `<span class="loader"></span> Deep Listening...`;
+            const tableData = document.getElementById('comparison-table').innerText;
+            const fullPrompt = `Grounded in the Sai Leela Rahasya video transcript about Damu Anna's mangoes and the 'Die' command:\n\nUser Query: ${query}\n\nContext Table: ${tableData}`;
+            try {
+                const result = await callGemini(fullPrompt);
+                responseText.innerHTML = result.replace(/\n/g, '<br>');
+                container.classList.remove('hidden');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `Get Insight ✨`;
+            }
+        }
+
+        async function generateMerge() {
+            const btn = document.getElementById('merge-btn');
+            const resultArea = document.getElementById('merge-result');
+            const mergeText = document.getElementById('merge-text');
+            const ctaContent = document.getElementById('cta-content');
+            btn.disabled = true;
+            btn.innerHTML = `<span class="loader"></span> Synthesizing Gists & Articles...`;
+            const prompt = `Synthesize the original 'Sai Leela Rahasya' video discourse with the four articles.Focus on the contrast between the astrological Prarabdha(no children) and the Kriyamana persistence, the tragedy of the 'diamonds vs pebbles' exchange, and the final realization that the 'Die' command was an act of profound mercy intended to eventually lead Damu Anna back to spiritual liberation.`;
+            try {
+                const result = await callGemini(prompt);
+                mergeText.innerText = result;
+                resultArea.classList.remove('hidden');
+                ctaContent.classList.add('opacity-30', 'pointer-events-none');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `Generate Ultimate Synthesis ✨`;
+            }
+        }
+
+        function resetMerge() {
+            document.getElementById('merge-result').classList.add('hidden');
+            document.getElementById('cta-content').classList.remove('opacity-30', 'pointer-events-none');
+        }
+    </script>
+</body>
+
+</html>
